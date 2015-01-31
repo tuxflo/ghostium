@@ -24,6 +24,8 @@
     <meta property="og:description" content="{{meta_description}}">
 
     {{> custom/meta this}}
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/sb.css'}}">
+
 
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
@@ -32,7 +34,7 @@
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset 'css/main.min.css'}}"/>
-
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}"/>
     <script type="text/javascript">
       {{> custom/config}}
 
@@ -77,6 +79,7 @@
 
     <script src="{{asset 'js/foot-scripts.min.js'}}"></script>
 
+
     <script type="text/javascript">
 
       if(GHOSTIUM.haveGA) {
@@ -97,5 +100,22 @@
         }());
       }
     </script>
+    <script src="{{asset 'js/foot-scripts.min.js'}}"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fluidbox.min.js"></script>
+    <script type="text/javascript" src="{{asset 'js/slimbox2.js'}}"></script>
+<script>
+
+$(document).ready(function() {
+    var _customHandler = function() {
+        //$("a.fb").slimbox();
+	$("a[rel^='lightbox']").slimbox();
+    };
+    _customHandler();
+
+    $(this).on('pjax:end', _customHandler);
+});
+</script>   
+
+    <script type="text/javascript" src="{{asset 'js/prism.js'}}"></script>
   </body>
 </html>
