@@ -19,9 +19,14 @@
     <meta name="twitter:title" content="{{meta_title}}">
     <meta name="twitter:description" content="{{meta_description}}">
 
+    <meta property="og:url" content="{{@blog.url}}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{meta_title}}">
     <meta property="og:description" content="{{meta_description}}">
+    <meta property="og:site_name" content="{{@blog.title}}">
+
+    <meta itemprop="name" content="{{meta_title}}">
+    <meta itemprop="description" content="{{meta_description}}">
 
     {{> custom/meta this}}
     <link rel="stylesheet" type="text/css" href="{{asset 'css/sb.css'}}">
@@ -31,6 +36,7 @@
     <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
 
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset 'css/main.min.css'}}"/>

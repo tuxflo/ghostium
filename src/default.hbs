@@ -19,9 +19,14 @@
     <meta name="twitter:title" content="{{meta_title}}">
     <meta name="twitter:description" content="{{meta_description}}">
 
+    <meta property="og:url" content="{{@blog.url}}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{meta_title}}">
     <meta property="og:description" content="{{meta_description}}">
+    <meta property="og:site_name" content="{{@blog.title}}">
+
+    <meta itemprop="name" content="{{meta_title}}">
+    <meta itemprop="description" content="{{meta_description}}">
 
     {{> custom/meta this}}
 
@@ -29,7 +34,7 @@
     <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
 
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
-    <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
     <!-- build:css({src,.tmp}) /assets/css/main.min.css -->
     <link href="/assets/_components/font-awesome/css/font-awesome.css">
@@ -61,6 +66,7 @@
     </script>
 
     <!-- build:js /assets/js/head-scripts.min.js -->
+    <script src="/assets/_components/jquery/jquery.js"></script>
     <script src="/assets/_components/modernizr/modernizr.js"></script>
     <script src="/assets/_components/pace/pace.js"></script>
     <!-- endbuild -->
@@ -110,7 +116,6 @@
     <script src="/assets/_components/prism/components/prism-scss.js"></script>
     <script src="/assets/_components/prism/components/prism-sql.js"></script>
     <script src="/assets/_components/prism/plugins/autolinker/prism-autolinker.js"></script>
-
     <script src="/assets/_components/jquery-pjax/jquery.pjax.js"></script>
     <script src="/assets/js/drawer.js"></script>
     <script src="/assets/js/imageLoader.js"></script>
